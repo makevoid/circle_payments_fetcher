@@ -8,5 +8,4 @@ ADD . ./
 
 ENV CIRCLE_API_KEY $CIRCLE_API_KEY
 
-
 CMD ruby circle_payments.rb
