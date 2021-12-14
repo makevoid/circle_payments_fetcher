@@ -19,7 +19,7 @@ give it a list of ids and return all the payment info associated with the IDs
 
 Replace `<API_KEY>` with your cirle API key
 
-The command will create a `payments.yml` containing all the info for each Circle payment
+The command will create a `payments.yml` file containing all the info for each Circle payment
 
 ---
 
