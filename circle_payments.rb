@@ -1,5 +1,6 @@
 require "yaml"
 require "excon"
+require "json"
 
 DEBUG = false
 
@@ -33,6 +34,7 @@ def get_payment(circle_payment_id:)
     JSON.parse res
   rescue Exception => err
     FAILED_REQUESTS << circle_payment_id
+    false
   end
 end
 
@@ -40,9 +42,12 @@ def main
   output = []
   payment_ids = read_all_payment_ids
   payment_ids.each_with_index do |payment_id, idx|
-    next if idx > 2
-
-    output << get_payment(circle_payment_id: payment_id)
+    # next if idx > 2
+    payment = get_payment circle_payment_id: payment_id
+    if payment
+      payment["payment_id"] = payment_id
+      output << payment
+    end
   end
   output = {
     circle_payments: output,
