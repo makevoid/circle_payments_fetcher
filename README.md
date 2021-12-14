@@ -2,7 +2,7 @@
 
 Batch fetcher for Circle payment information
 
-give it a list of ids and return all the payment info associated with the IDs
+give it a list of ids and return all the payment info associated with the IDs in a single YML file
 
 ### Prerequisites:
 
@@ -20,6 +20,7 @@ give it a list of ids and return all the payment info associated with the IDs
 Replace `<API_KEY>` with your cirle API key
 
 The command will create a `payments.yml` file containing all the info for each Circle payment
+
 
 ---
 
