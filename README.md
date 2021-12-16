@@ -7,13 +7,20 @@ give it a list of ids and return all the payment info associated with the IDs in
 ### Prerequisites:
 
 - Docker installed
+- Docker compose (optional)
 
 ### Setup:
 
-- create a `./data` directory 
+- create a `./data` directory
 - place a `circle_payment_ids.txt` files containing a list of newline separated Circle payment ids
 
 ### Run:
+
+via docker-compose.yml (clone the repo or copy this file from the repo to the local dir)
+
+    docker-compose pull && docker-compose run circle_payments > payments.yml
+
+via `docker run`:
 
     docker run -e CIRCLE_API_KEY=<API_KEY> -v data:/app/data makevoid/circle_payments > payments.yml
 
