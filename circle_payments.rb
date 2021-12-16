@@ -53,6 +53,7 @@ def main
     circle_payments: output,
     failed_requests: FAILED_REQUESTS,
   }.to_yaml
+  
   puts output
 end
 

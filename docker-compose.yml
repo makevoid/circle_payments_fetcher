@@ -3,8 +3,8 @@ version: "3"
 services:
   circle_payments:
     image: makevoid/circle_payments
-    build:
-      context: .
+    # build:
+    #   context: .
     environment:
       CIRCLE_API_KEY: test
     volumes:
